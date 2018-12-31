@@ -61,8 +61,15 @@ app.get('/about', (req,res)=>{
       //   currentYear: new Date().getFullYear()
           });
   });
- 
- 
+ ///////////////////////////////////////////////
+
+  app.get('/projects', (req,res)=>{
+    res.render('projects.hbs',{
+      Title: "Web site",
+      PageTitle:"Projects Page",
+      });
+});
+
   app.get('/bad', (req,res)=>{
      res.send({errorMessage:"Bad url request"})
     });
